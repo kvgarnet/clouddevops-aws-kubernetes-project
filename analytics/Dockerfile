@@ -14,4 +14,10 @@ RUN pip install --upgrade pip setuptools wheel && pip install -r requirements.tx
 
 COPY . .
 
+ENV DB_USERNAME=myuser \
+DB_PASSWORD=mypassword \
+DB_HOST=127.0.0.1 \
+DB_PORT=5433 \
+DB_NAME=mydatabase
+
 CMD python app.py
